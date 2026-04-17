@@ -10,6 +10,7 @@ env:
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 134efa89-8987-420f-bdae-7d365f50c3dc
   WEBAPP-NAME: eshoponweb-webapp-Sudheer1906
+  
 
 jobs:
   #Build, test and publish .net web project in repository
@@ -52,6 +53,7 @@ jobs:
     environment:
       name: "Development"
     steps:
+    
       #Download the publish files created in previous job
       - name: Download artifact from build job
         uses: actions/download-artifact@v6
